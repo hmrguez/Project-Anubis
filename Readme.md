@@ -25,11 +25,11 @@ You need to create and populate the entire application.properties file that is l
 server.address=127.0.0.1
 server.port=4000
 
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=AnubisDB;Trusted_Connection=True;
-spring.jpa.properties.hibernate.format_sql=true
+spring.datasource.url=
 spring.datasource.username=
 spring.datasource.password=
 spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.hibernate.ddl-auto=create-drop
 
 spring.kafka.bootstrap-servers=localhost:9092
@@ -43,7 +43,7 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 ```
 
 1. Got to the [Apache Quickstart](https://kafka.apache.org/quickstart) and follow the instructions. By default it should start in 9092
-2. Create the database using your favorite SQL Server Management Service. Then change the name in the spring.datasource.url field
+2. Create the database using your favorite SQL Server Management Service. Then change the connection string in the spring.datasource.url field
 3. Populate your username and password to access the DB
 4. Change the properties for your email sending configuration
 5. After that you should be ready to run the app using Maven 
