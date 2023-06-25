@@ -2,6 +2,7 @@ package com.anubis.appointment;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -12,10 +13,12 @@ import java.util.List;
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
+    private KafkaTemplate<String, Appointment> kafkaTemplate;
 
     @Autowired
-    public AppointmentController(AppointmentService appointmentService) {
+    public AppointmentController(AppointmentService appointmentService, KafkaTemplate<String, Appointment> kafkaTemplate) {
         this.appointmentService = appointmentService;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
     @GetMapping
@@ -31,6 +34,7 @@ public class AppointmentController {
     @PostMapping
     public void saveAppointment(@RequestBody Appointment appointment) {
         appointmentService.saveAppointment(appointment);
+        kafkaTemplate.send("pet", appointment);
     }
 
     @DeleteMapping("/{appointmentId}")
