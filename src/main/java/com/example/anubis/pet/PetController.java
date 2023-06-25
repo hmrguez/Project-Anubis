@@ -1,9 +1,7 @@
 package com.example.anubis.pet;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,20 @@ public class PetController {
     @GetMapping
     public List<Pet> getPets(){
         return this.petService.getPets();
+    }
+
+    @PostMapping
+    public void registerNewPet(@RequestBody Pet pet){
+        petService.insertPet(pet);
+    }
+
+    @DeleteMapping(path = "{petId}")
+    public void deletePet(@PathVariable("petId") Long petId){
+        petService.deletePet(petId);
+    }
+
+    @PutMapping(path="{petId}")
+    public void updatePet(@PathVariable("petId") Long petId, @RequestParam(required = false) Long ownerId){
+        petService.updatePet(petId, ownerId);
     }
 }
