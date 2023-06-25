@@ -1,4 +1,4 @@
-package com.example.anubis.owner;
+package com.anubis.owner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

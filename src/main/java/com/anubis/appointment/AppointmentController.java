@@ -1,4 +1,4 @@
-package com.example.anubis.appointment;
+package com.anubis.appointment;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;

@@ -1,7 +1,7 @@
-package com.example.anubis.pet;
+package com.anubis.pet;
 
-import com.example.anubis.owner.IOwnerRepository;
-import com.example.anubis.owner.Owner;
+import com.anubis.owner.IOwnerRepository;
+import com.anubis.owner.Owner;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

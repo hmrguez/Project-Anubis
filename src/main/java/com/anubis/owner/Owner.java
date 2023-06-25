@@ -1,6 +1,6 @@
-package com.example.anubis.owner;
+package com.anubis.owner;
 
-import com.example.anubis.pet.Pet;
+import com.anubis.pet.Pet;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

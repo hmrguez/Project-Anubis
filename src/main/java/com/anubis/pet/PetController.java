@@ -1,4 +1,4 @@
-package com.example.anubis.pet;
+package com.anubis.pet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

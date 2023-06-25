@@ -1,7 +1,7 @@
-package com.example.anubis.pet;
+package com.anubis.pet;
 
-import com.example.anubis.appointment.Appointment;
-import com.example.anubis.owner.Owner;
+import com.anubis.appointment.Appointment;
+import com.anubis.owner.Owner;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

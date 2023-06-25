@@ -1,4 +1,4 @@
-package com.example.anubis.appointment;
+package com.anubis.appointment;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

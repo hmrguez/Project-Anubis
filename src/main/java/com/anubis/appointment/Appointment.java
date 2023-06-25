@@ -1,11 +1,9 @@
-package com.example.anubis.appointment;
+package com.anubis.appointment;
 
-import com.example.anubis.pet.Pet;
+import com.anubis.pet.Pet;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "appointments")
